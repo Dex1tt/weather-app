@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(135deg, #b8d4f0, #7fa8d4);
+    transition: background-image 1s ease;
+}
+.card {
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: 32px;
+    animation: fadeIn 0.5s ease;
+}
+.hidden {
+    display: none;
+}
+.search-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: rgba(111, 111, 197, 0.15);
+    border: 1px solid rgba(111, 111, 197, 0.3);
+    color: grey;
+}
+input::placeholder {
+   color: rgb(151, 150, 150);
+}
+button {
+    padding: 10px 16px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
+h1 {
+    text-align: center;
+    font-size: 26px;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+#temperature {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+#description {
+    text-align: center;
+    color: #4a4a6a;
+    margin-bottom: 8px;
+    
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+.stat {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.stat-label{
+    font-size: 10px;
+    color: grey;
+}
+#result {
+    animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#weather-icon {
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+#forecast-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    gap: 20px;
+}
+.forecast-day {
+    background: rgba(111, 111, 197, 0.1);
+    border-radius: 12px;
+    padding: 8px 12px;
+    text-align: center;
+    flex: 1
+}
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+        padding: 1.5rem;
+    }
+    #forecast-container {
+        gap: 4px;
+    }
+}
