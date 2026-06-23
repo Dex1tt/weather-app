@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp - прогноз погоды онлайн</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="card">
+    <div class="search-row">
+    <input type="text" id="city-input" placeholder="Введи город...">
+    <button id="search-btn">Найти</button>
+    </div>
+   <div id="result" class="hidden">
+    <div id="weather-icon"></div>
+    <h1 id="city-name"></h1>
+    <p id="description"></p>
+    <p id="temperature"></p>
+    <div class="stats">
+        <div class="stat">
+            <p class="stat-label">Ощущается</p>
+            <p id="feels-like"></p>
+        </div>
+        <div class="stat">
+            <p class="stat-label">Влажность</p>
+            <p id="humidity"></p>
+        </div>
+        <div class="stat">
+            <p class="stat-label">Ветер</p>
+            <p id="wind"></p>
+        </div>
+    </div>
+        <div id="forecast-container">
+        </div>
+    </div>
+    <div id="error" class="hidden">
+        <p >Город не найден</p>
+    </div>
+   </div>   
+   <script src="script.js"></script>
+</body>
+</html>
